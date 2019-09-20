@@ -2,7 +2,7 @@
 
 void internal_function_is_not_visible()
 {
-   printf( "can't call me.\n" );
+   printf( "You can't call me directly.\n" );
 }
 
 void foo2( int x, int y )
@@ -12,6 +12,7 @@ void foo2( int x, int y )
 
 void foo1( int x )
 {
+   printf( "You can't call me directly.\n" );
    printf( "foo@@V1: %d\n", x );
 }
 
