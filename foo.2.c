@@ -7,12 +7,16 @@ void internal_function_is_not_visible()
 
 void foo2( int x, int y )
 {
+   if ( y < 2 )
+   {
+      internal_function_is_not_visible();
+   }
    printf( "foo@@V2: %d %d\n", x, y );
 }
 
 void foo1( int x )
 {
-   printf( "You can't call me directly.\n" );
+   internal_function_is_not_visible();
    printf( "foo@@V1: %d\n", x );
 }
 
